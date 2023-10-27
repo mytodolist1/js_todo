@@ -1,6 +1,6 @@
 import { deleteCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-export default function logout() {
+function logout() {
     var result = confirm("yakin?");
     if (result) {
         deleteCookie("token");

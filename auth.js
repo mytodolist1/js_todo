@@ -1,6 +1,6 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-export default function checkTokenAndRedirect() {
+function checkTokenAndRedirect() {
     const tokens = "token";
     const tokenValue = getCookie(tokens);
     // console.log("Token Value:", tokenValue);
