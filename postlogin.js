@@ -1,7 +1,6 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
-import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
-// import { checkTokenAndRedirect } from "./auth.js";
 
 export default function Login(){
 
@@ -20,6 +19,7 @@ function responseData(result) {
     alert(result.message);
     
     if (result.message === "Selamat Datang") {
+        setInner("pesan",result.message);
         setCookieWithExpireHour("token", result.token, 2);
         window.location.href = "index.html"; 
     } else if (result.message === "Password Salah") {
@@ -28,3 +28,5 @@ function responseData(result) {
         return false;
     }
 }
+
+document.getElementById("button").addEventListener("click", Login);
