@@ -10,3 +10,9 @@ function logout() {
 }
 
 document.getElementById("button").addEventListener("click", logout);
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+});
