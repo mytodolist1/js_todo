@@ -7,12 +7,12 @@ function Login(){
     let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-login";
     let token = "token";
     // let tokenvalue = "d4f1c80e75682f5cc33895fb3ccfe6e5165fea6df42d463eb7144e34db2d3ef0"; 
-    let datainjson = {
+    let data = {
         "username": getValue("username"),
         "password": getValue("password"),
     };
 
-    postWithToken(target_url, 'Authorization', 'Bearer ' + token, datainjson, responseData);
+    postWithToken(target_url, 'Authorization', 'Bearer ' + token, data, responseData);
 
 }
 function responseData(result) {

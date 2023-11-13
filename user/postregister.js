@@ -5,12 +5,12 @@ function Register(){
     let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";
     let token = "token";
 
-    let datainjson = {
+    let data = {
         "email": getValue("email"),
         "username": getValue("username"),
         "password": getValue("password"),
     };
-    postWithBearer(target_url, 'Bearer ' + token, datainjson, responseData);
+    postWithBearer(target_url, 'Bearer ' + token, data, responseData);
 }
 
 function responseData(result) {
