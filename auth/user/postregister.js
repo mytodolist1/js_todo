@@ -18,4 +18,4 @@ function responseData(result) {
     window.location.href= "login.html"
 }
 
-document.getElementById("button").addEventListener("click", Register);
+document.getElementById("button1").addEventListener("click", Register);
