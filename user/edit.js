@@ -1,5 +1,5 @@
 export function isiData(result){
-    const inputMapping = [
+    let inputMapping = [
         {id: "email", path: email},
         {id: "username", path: username},
     ];
@@ -10,7 +10,7 @@ export function isiData(result){
 }
 
 export function isiPassword(result){
-    const inputMapping = [
+    let inputMapping = [
         {id: "password", path: password},
     ];
 
