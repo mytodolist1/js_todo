@@ -10,12 +10,12 @@ function Register(){
         "username": getValue("username"),
         "password": getValue("password"),
     };
-    postWithBearer(target_url, 'Bearer ' + token, data, responseData);
+    postWithBearer(target_url, token, data, responseData);
 }
 
 function responseData(result) {
-    alert(result.message + "\nRegistrasi Berhasil")
-    window.location.href= "login.html"
+    alert(result.message);
+    window.location.href = "login.html";
 }
 
 document.getElementById("button1").addEventListener("click", Register);

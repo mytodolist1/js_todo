@@ -2,7 +2,7 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { putData } from "../prc/process.js";
 
 function updateData(){
-    targer_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateUser";
+    target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateUser";
 
     let data = {
         "email": getValue("email"),
@@ -12,7 +12,7 @@ function updateData(){
 }
 
 function responseData(result) {
-    alert(result.message + "\nUpdate data Berhasil")
+    alert(result.message + "\nUpdate Data Berhasil")
     window.location.href= "profile.html"
 }
 

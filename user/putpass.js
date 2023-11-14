@@ -11,7 +11,7 @@ function updatePassword(){
 }
 
 function responseData(result) {
-    alert(result.message + "\nUpdate data Berhasil")
+    alert(result.message + "\nChange Password Berhasil")
     window.location.href= "profile.html"
 }
 

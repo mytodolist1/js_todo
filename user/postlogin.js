@@ -1,8 +1,9 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
+// import { checkTokenAndRedirect } from "./auth.js";
 
-function Login(){
+export default function Login(){
 
     let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-login";
     let token = "token";
@@ -18,11 +19,9 @@ function Login(){
 function responseData(result) {
     alert(result.message);
     
-    if (result.message === "Selamat Datang") {
+    if (result.status === true) {
         setCookieWithExpireHour("token", result.token, 2);
         window.location.href = "index.html"; 
-    } else if (result.message === "Password Salah") {
-        window.location.href = "login.html";
     } else {
         return false;
     }
