@@ -2,7 +2,7 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { putWithToken } from "../temp/component.js";
 
 const updateUser = () => {
-    const username = getValue("username1");
+    const username = getValue("username");
 
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
 
@@ -11,12 +11,16 @@ const updateUser = () => {
         confirmpassword : getValue("confirmpass"),
     };
 
-    console.log(data);
+    const change = document.getElementById('change');
+    change.classList.add('is-loading');
     
     putWithToken(target_url, data, responseData);
 };
 
 const responseData = (result) => {
+    const change = document.getElementById('change');
+    change.classList.remove('is-loading');
+
     if (result.status === true) {
         Swal.fire({
             icon: "success",

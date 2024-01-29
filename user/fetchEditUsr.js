@@ -1,4 +1,4 @@
-import { isiData } from "./editUser.js";
+import { isiData } from "./editUsr.js";
 import { getWithToken } from "../temp/component.js";
 
 const urlParams = new URLSearchParams(window.location.search);
